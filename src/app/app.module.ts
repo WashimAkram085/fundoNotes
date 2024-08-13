@@ -13,12 +13,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { RegisterComponent } from './components/register/register.component';
+import { NameComponent } from './components/basicInformation/name/name.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NameComponent
   ],
   imports: [
     BrowserModule,

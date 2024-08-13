@@ -20,6 +20,7 @@ form {
     // padding-left: 20px;
     // padding-top: 20px;
     padding: 15px;
+    height: 350px;
 }
 
 .left {
@@ -36,21 +37,20 @@ form {
     flex-direction: column;
     margin-left: 10%;
     width: 50%;
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 .heading {
     font-size: var(--wf-tfs-bp3, 2.25rem);
     line-height: 1.2222222222;
     font-weight: 400;
-    padding-top: 20px;
 }
 
 mat-form-field {
     // border: 1px solid green;
-    margin-bottom: 4%;
     margin-left: 7px;
     width: 90%;
+    margin-bottom: 3%;
 }
 
 mat-button {
@@ -75,7 +75,7 @@ mat-button {
 
 .button-class {
     width: 90%;
-    margin-top: 30px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -109,6 +109,18 @@ mat-button {
     background-color: rgb(13, 13, 230) !important;
 }
 
+.create-button {
+    color: rgb(71, 71, 221) !important;
+}
+
+.create-button:hover {
+    border-radius: 20px;
+    background-color: white !important;
+}
+
+.learn-txt {
+    margin-top: 0px;
+}
 
 
 //footer
