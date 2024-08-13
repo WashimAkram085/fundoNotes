@@ -13,8 +13,8 @@
 form {
     background-color: white;
     // border: 1px solid red;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 70px;
     border-radius: 20px;
     // padding-left: 20px;
@@ -27,7 +27,7 @@ form {
     display: flex;
     flex-direction: column;
     margin-left: 8px;
-    width: 50%;
+    width: 40%;
     margin-top: 10px;
 }
 
@@ -35,15 +35,15 @@ form {
     // border: 1px solid blue;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 10%;
     width: 50%;
     padding-top: 20px;
 }
 
 .heading {
-    font-size: 35px;
+    font-size: var(--wf-tfs-bp3, 2.25rem);
+    line-height: 1.2222222222;
     font-weight: 400;
-    padding-top: 20px;
 }
 
 mat-form-field {
@@ -123,19 +123,20 @@ mat-button {
 
 
 //footer
-.box-footer{
+.box-footer {
     display: flex;
     justify-content: space-between;
-    font-size:12px !important;
+    font-size: 12px !important;
     color: #1f1f1f !important;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
     background-color: rgb(231, 229, 229);
-    margin-left: 13.5%;
-    margin-right: 13.5%;
+    margin-left: 18.5%;
+    margin-right: 18.5%;
 }
-.footer-button{
+
+.footer-button {
     justify-content: space-evenly;
     color: #1f1f1f !important;
     background-color: transparent;
@@ -144,7 +145,8 @@ mat-button {
     gap: 30px;
     padding: 10px;
 }
-.footer-button:not(:hover){
+
+.footer-button:not(:hover) {
     background-color: transparent;
- 
+
 }
