@@ -14,6 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { RegisterComponent } from './components/register/register.component';
 import { NameComponent } from './components/basicInformation/name/name.component';
+import { BirthdayComponent } from './components/basicInformation/birthday/birthday.component';
+import { PasswordComponent } from './components/basicInformation/password/password.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { NameComponent } from './components/basicInformation/name/name.component
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NameComponent
+    NameComponent,
+    BirthdayComponent,
+    PasswordComponent
   ],
   imports: [
     BrowserModule,

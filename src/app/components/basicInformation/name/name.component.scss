@@ -1,27 +1,4 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
-    font-weight: 400;
-}
 
-.logo {
-    margin-left: 10px;
-}
-
-form {
-    background-color: white;
-    // border: 1px solid red;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 70px;
-    border-radius: 20px;
-    // padding-left: 20px;
-    // padding-top: 20px;
-    padding: 15px;
-    height: 350px;
-}
 
 .left {
     display: flex;
@@ -57,15 +34,6 @@ mat-button {
     padding: 0px !important;
 }
 
-.info {
-    // border: 1px solid black;
-    margin-top: 50px;
-    width: 90%;
-}
-
-.msg {
-    margin-left: 7px;
-}
 
 .mat-mdc-form-field-subscript-wrapper,
 .mat-mdc-form-field-bottom-align,
@@ -85,69 +53,9 @@ mat-button {
 
 .button-next {
     border-radius: 20px;
-    color: rgb(78, 221, 71);
-}
-
-.button-3 {
-    padding-left: 7px;
-    margin-top: 7px;
-    color: rgb(71, 71, 221);
-    border: none;
-    background-color: white;
-    font-weight: 400;
-}
-
-.button-3:hover {
-    cursor: pointer;
-}
-
-.button-next {
-    background-color: rgb(71, 71, 221) !important;
+    color: rgb(255, 255, 255);
 }
 
 .button-next:hover {
     background-color: rgb(13, 13, 230) !important;
-}
-
-.create-button {
-    color: rgb(71, 71, 221) !important;
-}
-
-.create-button:hover {
-    border-radius: 20px;
-    background-color: white !important;
-}
-
-.learn-txt {
-    margin-top: 0px;
-}
-
-
-//footer
-.box-footer {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px !important;
-    color: #1f1f1f !important;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background-color: rgb(231, 229, 229);
-    margin-left: 18.5%;
-    margin-right: 18.5%;
-}
-
-.footer-button {
-    justify-content: space-evenly;
-    color: #1f1f1f !important;
-    background-color: transparent;
-    border: none;
-    font-size: 12px;
-    gap: 30px;
-    padding: 10px;
-}
-
-.footer-button:not(:hover) {
-    background-color: transparent;
-
 }
