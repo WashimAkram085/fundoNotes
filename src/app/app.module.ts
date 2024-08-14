@@ -18,7 +18,9 @@ import { BirthdayComponent } from './components/basicInformation/birthday/birthd
 import { PasswordComponent } from './components/basicInformation/password/password.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
-    
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

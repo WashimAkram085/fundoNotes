@@ -1,1 +1,37 @@
-<p>birthday works!</p>
+<div style="display: flex;">
+    <div class="left">
+        <p class="heading">Basic information
+        <p>
+        <div>Enter your birthday and gender</div>
+    </div>
+    <div class="right">
+        <div>
+            <mat-form-field appearance="outline" color=primary>
+                <mat-label>DOB</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline" color=primary>
+                <mat-label>Gender</mat-label>
+                <mat-select disableRipple>
+                    <mat-option value="1">Female</mat-option>
+                    <mat-option value="2">Male</mat-option>
+                    <mat-option value="3">Rather not say</mat-option>
+                    <mat-option value="4">Custom</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="button-3">
+                <span>Why we ask for birthday and gender</span>
+            </div>
+        </div>
+
+        <div class="button-class">
+            <button mat-raised-button color="primary" class="button button-next" (click)="goToNext()">Next</button>
+
+        </div>
+    </div>
+
+</div>

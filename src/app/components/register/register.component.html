@@ -17,10 +17,16 @@
                 </path>
             </svg>
         </div>
-        <div *ngIf = "currentRout === '/register'">
+        <div *ngIf="currentRout === '/register'">
             <app-name></app-name>
         </div>
-        
+        <div *ngIf="currentRout === '/register/birthday'">
+            <app-birthday></app-birthday>
+        </div>
+        <div *ngIf="currentRout === '/register/password'">
+            <app-password></app-password>
+        </div>
+
     </form>
 </div>
 
@@ -37,7 +43,7 @@
             <mat-option value="1">English (United States)</mat-option>
             <mat-option value="1">English (United States)</mat-option>
             <mat-option value="1">English (United States)</mat-option>
-          </mat-select>
+        </mat-select>
     </div>
     <div>
         <button class="footer-button">Help</button>
