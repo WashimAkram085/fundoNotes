@@ -26,7 +26,7 @@ form {
 //footer
 .box-footer {
     display: flex;
-    justify-content: space- tween;
+    justify-content: space-between;
     font-size: 12px !important;
     color: #1f1f1f !important;
     border: none;
@@ -51,3 +51,14 @@ form {
     background-color: transparent;
 
 }
+mat-select{
+    width: 170px;
+    font-size: 12px;
+    margin-left: 8px;
+}
+mat-option{
+    font-size: 12px;
+    width: 100%;
+}
+
+

@@ -16,6 +16,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { NameComponent } from './components/basicInformation/name/name.component';
 import { BirthdayComponent } from './components/basicInformation/birthday/birthday.component';
 import { PasswordComponent } from './components/basicInformation/password/password.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -36,7 +38,10 @@ import { PasswordComponent } from './components/basicInformation/password/passwo
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
