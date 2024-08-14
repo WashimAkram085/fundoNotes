@@ -58,7 +58,7 @@ mat-button {
 
 .info {
     // border: 1px solid black;
-    margin-top: 12px;
+    margin-top: 25px;
     width: 90%;
 }
 
@@ -160,4 +160,20 @@ mat-option{
     width: 100%;
 }
 
-
+#newcard{
+    display:none;
+    background-color: #e0e7f1 ;
+    width:220px;
+    position: fixed;
+    right: 24%;
+    top: 40%;
+    padding:10px;
+    z-index: 1000;
+    color:#1f1f1f;
+    border-radius: 20px;
+}
+.newcarditem{
+    height:30px;
+    padding:7px 0px 2.3px 10px;
+   
+}

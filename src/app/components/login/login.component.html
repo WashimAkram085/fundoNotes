@@ -43,8 +43,20 @@
                 </div>
 
                 <div class="button-class">
-                    <a [routerLink]="['/register']"><button mat-button color=primary class="create-button"><span>Create
-                        account</span></button></a>
+                        <button mat-button color=primary class="create-button" (click)="openNewAccount($event)">Create account</button>
+                        <mat-card id="newcard">
+                            <div style="display: flex;flex-direction: column;  justify-content: end">
+                                <div class="newcarditem">
+                                    <a style="text-decoration: none; color: black;" [routerLink]="['/register']">For personal use</a>
+                                </div>
+                                <div class="newcarditem">
+                                    <a>For my child</a>
+                                </div>
+                                <div class="newcarditem">
+                                    <a>For work and my business</a>
+                                </div>
+                            </div>
+                        </mat-card>
                     <button mat-raised-button color="primary" class="button button-next">Next</button>
 
                 </div>
