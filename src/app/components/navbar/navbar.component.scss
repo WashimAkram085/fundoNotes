@@ -1,0 +1,72 @@
+::ng-deep .mat-toolbar-row, .mat-toolbar-single-row{
+    padding-left: 0px !important;
+    background-color:  white !important;
+    border-bottom: 2px solid rgb(242, 235, 235);
+}
+.porfileImage {
+    width: 35px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.logo {
+    width: 30px;
+    height: 40px;
+    border-radius: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+mat-form-field {
+    margin-left: 51px;
+    width: 43%;
+    height: 47px;
+    background-color: rgb(237, 234, 234);
+    border-radius: 7px;
+}
+::ng-deep .mat-mdc-text-field-wrapper {
+    margin-top: 2px;
+    height: 45px !important;
+}
+
+mat-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+    padding-top: 0px !important;
+}
+
+.refersh {
+    margin-left: 210px;
+}
+
+.apps {
+    margin-left: 20px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+// .searchBar {
+//     width: 10%;
+//     margin-left: 10px;
+//     margin-right: 10px;
+// }
+
+
+::ng-deep .mat-form-field-flex {
+    display: inline-flex;
+    align-items: baseline;
+    /* box-sizing: border-box; */
+    width: 100% !important;
+    margin-top: 10px !important;
+    margin-left: 100px !important;
+    height: 50px !important;
+}
