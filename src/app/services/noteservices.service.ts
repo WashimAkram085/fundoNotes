@@ -10,7 +10,9 @@ export class NoteservicesService {
 
   getNotes(){
     console.log("API is on");
-    return this.httpclient.get("https://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList?access_token=7iCJEpYTdL5h3OAfv4MiACxQrX2Gpbb3ZyMlv1uWly5W2ifuwhOoBAYFHEyRJ8Q5");
+    const id = localStorage.getItem("access_token");
+    // console.log(id);
+    return this.httpclient.get(`https://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList?access_token=${id}`);
   }
 
 }

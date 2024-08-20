@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="submitform()">
         <div class="logo">
             <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true"
                 jsname="jjf7Ff">
@@ -68,8 +68,8 @@
                             </div>
                         </div>
                     </mat-card>
-                    <button mat-raised-button color="primary" class="button button-next"
-                        [routerLink]="['/dashboard']">Next</button>
+                    <button mat-raised-button color="primary" class="button button-next" type="submit"
+                        >Next</button>
                 </div>
             </div>
 

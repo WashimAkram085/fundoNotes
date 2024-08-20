@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { LoginserviceService } from 'src/app/services/loginservices.service';
-import { UserservicesService } from 'src/app/services/userservices.service';
 import { Router } from '@angular/router';
+import { HttpservicesService } from 'src/app/services/httpservices.service';
 
 @Component({
   selector: 'app-login',
@@ -11,45 +10,41 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  constructor(private fb: FormBuilder, private LoginServiceService: LoginserviceService, private userServcies: UserservicesService , private route: Router) {
+  constructor(private fb: FormBuilder, private route: Router, private httpservice: HttpservicesService) {
 
   }
+  email : string = '';
+  password : string = '';
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
-  handleLogin() {
-    if (this.loginForm.invalid) return;
-    const { email, password } = this.loginForm.value;
-    this.LoginServiceService.setEmail(email);
-    console.log(email);
 
-    this.LoginServiceService.setPassword(password);
-    console.log(password);
+  submitform(){
+    this.email = this.loginForm.get('email')?.value;
+    this.password = this.loginForm.get('password')?.value;
+    console.log(this.email);
+    console.log(this.password);
 
-    const email1 = this.LoginServiceService.getEmail();
-    console.log(email1);
-
-    const password1 = this.LoginServiceService.getPassword();
-    console.log(password1);
-
-    this.userServcies.loginAPIcall({email:"qwerty123@samp.com",password:"qwerty123"}).subscribe({
-      next:(res:any)=>{
-       const {id} = res;
-       console.log("response",id);
-       localStorage.setItem("access_token",id);
-       this.route.navigate(['./dashboard/']);
+    this.httpservice.login({email:this.email,password:this.password}).subscribe(
+      (res:any)=>{
+        console.log(res);
+        const id = res.id;
+        console.log("response",id);
+        localStorage.setItem("access_token",id);
+        this.route.navigate(['/dashboard']);
       },
-      error:(err: any) => {
+      (err:any)=>{
         console.log("response",err);
       }
-    });
+    );
 
   }
+
 
   openNewAccount(e: Event) {
     e.preventDefault();
