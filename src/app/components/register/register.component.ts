@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { NameComponent } from '../basicInformation/name/name.component';
-import { BirthdayComponent } from '../basicInformation/birthday/birthday.component';
-import { PasswordComponent } from '../basicInformation/password/password.component';
 
 @Component({
   selector: 'app-register',

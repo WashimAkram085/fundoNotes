@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-
+  currentRoute: string = '';
+  constructor(private router: Router) {
+    this.router.events.subscribe((val) => {
+      this.currentRoute = this.router.url;
+    })
+  }
 }

@@ -1,7 +1,7 @@
 .mat-drawer-container {
     display: inline;
     background-color: #f5f5f5;
-    width: 50%;
+    width: auto;
 }
 
 ::ng-deep .mat-drawer-inner-container{
@@ -12,7 +12,7 @@
 }
 
 mat-sidenav {
-    width: 22%;
+    width: 250px;
     border: none;
 }
 
@@ -25,6 +25,12 @@ mat-icon {
     margin-right: 16px;
 }
 
-::ng-deep .mat-list-option:hover, .mat-list-option:focus, .mat-nav-list .mat-list-item:hover, .mat-nav-list .mat-list-item:focus, .mat-action-list .mat-list-item:hover, .mat-action-list .mat-list-item:focus {
+// ::ng-deep .mat-list-option:hover, .mat-list-option:focus, .mat-nav-list .mat-list-item:hover, .mat-nav-list .mat-list-item:focus, .mat-action-list .mat-list-item:hover, .mat-action-list .mat-list-item:focus {
+//     background: rgba(255, 16, 16, 0.5) !important;
+// }
+.mat-list-item:hover {
     background: rgba(255, 16, 16, 0.5) !important;
+}
+.example-container{
+    margin-left: 20px;
 }

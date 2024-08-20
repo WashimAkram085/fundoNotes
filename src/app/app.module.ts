@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -27,6 +28,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { NotesComponent } from './components/notes/notes.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { FormGroup } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     PasswordComponent,
     NavbarComponent,
     DashboardComponent,
-    SidebarComponent
+    SidebarComponent,
+    NotesComponent,
+    ArchiveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,

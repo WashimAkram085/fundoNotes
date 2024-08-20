@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="">
+    <form [formGroup]="loginForm">
         <div class="logo">
             <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true"
                 jsname="jjf7Ff">
@@ -25,10 +25,17 @@
             </div>
             <div class="right">
                 <div>
-                        <mat-form-field class="example-full-width" appearance="outline" color=primary>
-                            <mat-label>Email or phone</mat-label>
-                            <input matInput>
-                        </mat-form-field>
+                    <mat-form-field class="example-full-width" appearance="outline" color=primary>
+                        <mat-label>Email or Phone</mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                    <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" style="color: red; margin-left: 5px;">
+                        Please provide a valid email address.
+                      </div>
+                    <mat-form-field class="example-full-width" appearance="outline" color=primary>
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password">
+                    </mat-form-field>
                     <div class="button-3">
                         <span>Forgot email?</span>
                     </div>
@@ -38,26 +45,29 @@
                         Not your computer? Use Guest mode to sign in privately.
                     </div>
                     <div class="button-3 learn-txt">
-                        <span >Learn more about using Guest mode</span>
+                        <span>Learn more about using Guest mode</span>
                     </div>
                 </div>
 
                 <div class="button-class">
-                        <button mat-button color=primary class="create-button" (click)="openNewAccount($event)">Create account</button>
-                        <mat-card id="newcard">
-                            <div style="display: flex;flex-direction: column;  justify-content: end">
-                                <div class="newcarditem">
-                                    <a style="text-decoration: none; color: black;" [routerLink]="['/register']">For personal use</a>
-                                </div>
-                                <div class="newcarditem">
-                                    <a>For my child</a>
-                                </div>
-                                <div class="newcarditem">
-                                    <a>For work and my business</a>
-                                </div>
+                    <button mat-button color=primary class="create-button" (click)="openNewAccount($event)">Create
+                        account</button>
+                    <mat-card id="newcard">
+                        <div style="display: flex;flex-direction: column;  justify-content: end">
+                            <div class="newcarditem">
+                                <a style="text-decoration: none; color: black;" [routerLink]="['/register']">For
+                                    personal use</a>
                             </div>
-                        </mat-card>
-                    <button mat-raised-button color="primary" class="button button-next" [routerLink]="['/dashboard']">Next</button>
+                            <div class="newcarditem">
+                                <a>For my child</a>
+                            </div>
+                            <div class="newcarditem">
+                                <a>For work and my business</a>
+                            </div>
+                        </div>
+                    </mat-card>
+                    <button mat-raised-button color="primary" class="button button-next"
+                        [routerLink]="['/dashboard']">Next</button>
                 </div>
             </div>
 
@@ -78,7 +88,7 @@
             <mat-option value="1">English (United States)</mat-option>
             <mat-option value="1">English (United States)</mat-option>
             <mat-option value="1">English (United States)</mat-option>
-          </mat-select>
+        </mat-select>
     </div>
     <div>
         <button class="footer-button">Help</button>
