@@ -5,14 +5,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpservicesService {
-  BaseUrl = 'https://fundoonotes.incubation.bridgelabz.com/api';
+  BaseUrl = 'https://fundoonotes.incubation.bridgelabz.com/api//user/login';
 
   constructor(private httpclient: HttpClient) {
   }
 
   // to post the log in data in the api body
   login(data: any) {
-    return this.httpclient.post(this.BaseUrl + '/user/login', data);
+    return this.httpclient.post(this.BaseUrl, data);
   }
 
   // getNotes(){

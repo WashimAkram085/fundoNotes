@@ -7,6 +7,7 @@ import { BirthdayComponent } from './components/basicInformation/birthday/birthd
 import { PasswordComponent } from './components/basicInformation/password/password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotesComponent } from './components/notes/notes.component';
+import { authGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -19,7 +20,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent, canActivate: [authGuard],
     children: [
       {path: 'notes', component: NotesComponent},
       
