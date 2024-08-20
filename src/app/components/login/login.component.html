@@ -29,13 +29,15 @@
                         <mat-label>Email or Phone</mat-label>
                         <input matInput placeholder="Email" formControlName="email">
                     </mat-form-field>
-                    <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" style="color: red; margin-left: 5px;">
+                    <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+                        style="color: red; margin-left: 5px;">
                         Please provide a valid email address.
-                      </div>
+                    </div>
                     <mat-form-field class="example-full-width" appearance="outline" color=primary>
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="Password" formControlName="password">
                     </mat-form-field>
+                    <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" style="color: red; margin-left: 5px;">Please provide a valid Password</div>
                     <div class="button-3">
                         <span>Forgot email?</span>
                     </div>

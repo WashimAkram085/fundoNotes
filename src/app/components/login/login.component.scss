@@ -21,6 +21,7 @@ form {
     // padding-top: 20px;
     padding: 15px;
     height: 350px;
+    box-shadow: 2px 2px 2px 2px rgb(192, 191, 191);
 }
 
 .left {
@@ -37,7 +38,7 @@ form {
     flex-direction: column;
     margin-left: 10%;
     width: 50%;
-    padding-top: 20px;
+    // padding-top: 20px;
 }
 
 .heading {
@@ -50,6 +51,7 @@ mat-form-field {
     // border: 2px solid green;
     margin-left: 7px;
     width: 90%;
+    margin-bottom: 5px;
 }
 
 mat-button {
@@ -72,7 +74,7 @@ mat-button {
 
 .button-class {
     width: 90%;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -131,9 +133,10 @@ mat-button {
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
-    background-color: rgb(231, 229, 229);
-    margin-left: 18.5%;
-    margin-right: 18.5%;
+    background-color: rgb(255, 255, 255);
+    margin-left: 19.5%;
+    margin-right: 19.5%;
+    margin-top: 2%;
 }
 
 .footer-button {
