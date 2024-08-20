@@ -6,10 +6,11 @@ import { HttpservicesService } from './httpservices.service';
   providedIn: 'root'
 })
 export class NoteservicesService {
-  constructor(private httpservice : HttpservicesService) {}
+  constructor(private httpservice : HttpservicesService, private httpclient: HttpClient) {}
 
-  getNotes(url : any){
-    return this.httpservice.getApiCall('notes/'+url);
+  getNotes(){
+    console.log("API is on");
+    return this.httpclient.get("https://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList?access_token=7iCJEpYTdL5h3OAfv4MiACxQrX2Gpbb3ZyMlv1uWly5W2ifuwhOoBAYFHEyRJ8Q5");
   }
 
 }

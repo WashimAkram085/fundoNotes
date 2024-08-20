@@ -14,37 +14,15 @@
 
 
 <div class="note-card">
-    <div class="card">
-        <div class="header">Lorem ipsum dolor sit.</div>
-        <div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente illo accusantium qui fuga vel. Suscipit dicta consectetur placeat obcaecati.</div>
+    <div class="card" *ngFor = "let note of notesList">
+        <div class="header">{{note.title}}</div>
+        <div class="body">{{note.description}}</div>
         <div class="button">
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-        </div>
-    </div>
-    <div class="card">
-        <div class="header">Lorem ipsum dolor sit.</div>
-        <div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente illo accusantium qui fuga vel. Suscipit dicta consectetur placeat obcaecati.</div>
-        <div class="button">
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-        </div>
-    </div>
-    <div class="card">
-        <div class="header">Lorem ipsum dolor sit.</div>
-        <div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sapiente illo accusantium qui fuga vel. Suscipit dicta consectetur placeat obcaecati.</div>
-        <div class="button">
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
-            <mat-icon>check_box</mat-icon>
+            <mat-icon class="button-icon">check_circle</mat-icon>
+            <mat-icon class="button-icon">delete_outline</mat-icon>
+            <mat-icon class="button-icon">favorite_border</mat-icon>
+            <mat-icon class="button-icon">home</mat-icon>
+            <mat-icon class="button-icon">label_important</mat-icon>
         </div>
     </div>
 
