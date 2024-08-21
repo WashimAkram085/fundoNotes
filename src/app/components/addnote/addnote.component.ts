@@ -11,13 +11,13 @@ export class AddnoteComponent implements OnInit {
   //@Output() noteAdded: EventEmitter<any> = new EventEmitter<any>();
 
 
-  constructor(private fb: FormBuilder , private noteservice : NoteservicesService) { }
+  constructor(private fb: FormBuilder, private noteservice: NoteservicesService) { }
   notesform!: FormGroup;
   isExpanded: Boolean = false;
   ngOnInit(): void {
     this.notesform = this.fb.group({
       title: [''],
-      note: [''],
+      description: [''],
       isPinned: [false],
       isReminded: [false],
       isArchived: [false]
@@ -26,8 +26,8 @@ export class AddnoteComponent implements OnInit {
   }
   addNote = () => {
     let FormData = {
-      title:this.notesform.get('title')?.value,
-      note:this.notesform.get('note')?.value,
+      title: this.notesform.get('title')?.value,
+      description: this.notesform.get('description')?.value,
     }
     this.noteservice.addNotes(FormData).subscribe({
       next: (res: any) => {
