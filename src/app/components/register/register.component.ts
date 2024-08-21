@@ -9,7 +9,6 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  signupform! : FormGroup;
 
   currentRout :string = '';
   constructor(private router : Router, private httpservice : HttpservicesService, private fb : FormBuilder) { 
@@ -17,4 +16,8 @@ export class RegisterComponent {
       this.currentRout = this.router.url;
     })
   }
+
+  // submitregform(){
+
+  // }
 }

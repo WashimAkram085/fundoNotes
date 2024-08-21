@@ -5,20 +5,24 @@
         <div>Enter your name</div>
     </div>
     <div class="right">
-        <div>
+        <form [formGroup]="signupform" (ngSubmit)="regformsubmit()">
+            <div>
                 <mat-form-field appearance="outline" color=primary>
                     <mat-label>First name</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="fname">
                 </mat-form-field>
+                <div *ngIf="signupform.get('fname')?.invalid && (signupform.get('fname')?.dirty || signupform.get('fname')?.touched)" style="color: red; margin-left: 5px;">Please provide a valid Name</div>
                 <mat-form-field appearance="outline" color=primary>
                     <mat-label>Last name (optional)</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="lname">
                 </mat-form-field>
-        </div>
+            </div>
 
-        <div class="button-class">
-            <a><button mat-raised-button color="primary" class="button button-next" (click)="goToNext()">Next</button></a>
-        </div>
+            <div class="button-class">
+                <a><button mat-raised-button color="primary" class="button button-next" type="submit"
+                        >Next</button></a>
+            </div>
+        </form>
     </div>
 
 </div>

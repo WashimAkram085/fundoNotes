@@ -1,0 +1,31 @@
+<div style="display: flex;">
+    <div class="left">
+        <p class="heading">Create your Gmail address
+        <p>
+        <div>Enter your Gmail address</div>
+    </div>
+    <div class="right">
+        <form [formGroup]="signupform" (ngSubmit)="regformsubmit()">
+            <div>
+                <mat-form-field appearance="outline" color=primary>
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+                <div *ngIf="signupform.get('email')?.invalid && (signupform.get('email')?.dirty || signupform.get('email')?.touched)"
+                    style="color: red; margin-left: 5px;">
+                    Please provide a valid email address.
+                </div>
+                <mat-form-field appearance="outline" color=primary>
+                    <mat-label>Confirm your email</mat-label>
+                    <input matInput formControlName="confirmEmail">
+                </mat-form-field>
+                <div *ngIf="signupform.get('confirmEmail')?.invalid && (signupform.get('confirmEmail')?.dirty || signupform.get('confirmEmail')?.touched)" style="color: rgb(255, 0, 0); margin-left: 5px;">Please provide a valid email address</div>
+            </div>
+
+            <div class="button-class">
+                <a><button mat-raised-button color="primary" class="button button-next" type="submit">Next</button></a>
+            </div>
+        </form>
+    </div>
+
+</div>

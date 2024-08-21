@@ -34,6 +34,7 @@ import { TrashComponent } from './components/trash/trash.component';
 import { FormGroup } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { EmailComponent } from './components/basicInformation/email/email.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     NotesComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,

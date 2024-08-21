@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="signupform">
+    <form>
         <div class="logo">
             <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true"
                 jsname="jjf7Ff">
@@ -19,6 +19,9 @@
         </div>
         <div *ngIf="currentRout === '/register'">
             <app-name></app-name>
+        </div>
+        <div *ngIf="currentRout === '/register/email'">
+            <app-email></app-email>
         </div>
         <div *ngIf="currentRout === '/register/birthday'">
             <app-birthday></app-birthday>

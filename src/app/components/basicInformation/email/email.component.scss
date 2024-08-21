@@ -1,0 +1,64 @@
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.right {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    width: 50%;
+    padding-top: 20px;
+}
+
+.heading {
+    font-size: var(--wf-tfs-bp3, 2.25rem);
+    line-height: 1.2222222222;
+    font-weight: 400;
+}
+
+mat-form-field {
+    //border: 1px solid red;
+    margin-left: 7px;
+    width: 90%;
+    margin-bottom: 12px;
+}
+
+mat-button {
+    padding: 0px !important;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    height: 0px;
+}
+
+// .mat-mdc-form-field-subscript-wrapper,
+// .mat-mdc-form-field-bottom-align,
+// .ng-tns-c1205077789-0 {
+//     height: 55px;
+// }
+
+.button-class {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+
+}
+
+.button-next {
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.button-next:hover {
+    background-color: rgb(13, 13, 230) !important;
+}
