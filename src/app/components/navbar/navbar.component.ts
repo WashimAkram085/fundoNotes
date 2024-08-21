@@ -7,12 +7,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  navTitile : string = 'FundooNotes';
+  navTitile: string = 'FundooNotes';
 
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
-  logout(){
-    localStorage.removeItem("access_token");
-    this.router.navigate(['']);
+  logout() {
+    let dlt : boolean = confirm("Do you want to logout?");
+    //console.log(dlt);
+    if (!dlt) {
+      //console.log('Logout cancelled');
+      return;
+    } else {
+      localStorage.removeItem("access_token");
+      this.router.navigate(['']);
+    }
   }
 }

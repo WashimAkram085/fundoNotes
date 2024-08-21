@@ -36,10 +36,12 @@ export class NameComponent {
     this.fname = this.signupform.get('fname')?.value;
     this.lname = this.signupform.get('lname')?.value;
 
-    console.log(this.fname);
+    //console.log(this.fname);
     console.log(this.lname);
 
     this.signupservice.setname(this.fname, this.lname);
+    
+    //console.log(this.signupservice.getname());
     this.route.navigate(['register/birthday']);
   }
 }

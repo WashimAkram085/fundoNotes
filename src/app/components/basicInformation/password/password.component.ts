@@ -24,7 +24,7 @@ export class PasswordComponent {
   }
 
   regformsubmit() {
-    
+
 
     this.password = this.signupform.get('password')?.value;
     this.confirmPassword = this.signupform.get('confirmPassword')?.value;
@@ -33,14 +33,30 @@ export class PasswordComponent {
       // If the form is invalid, do not proceed
       console.log('Form is invalid');
       return;
-    }else if (this.password != this.confirmPassword) {
+    } else if (this.password != this.confirmPassword) {
       alert("Passwords do not match");
       return;
     } else {
       console.log(this.password);
       this.signupservice.setpassword(this.password);
-      this.route.navigate(['']);
+
+      //console.log(this.signupservice.getData());
+
+
+      //call the service to send the data to the server
+      this.signupservice.signup(this.signupservice.getData()).subscribe({
+        next: data => {
+          console.log(data);
+          console.log('Signup successful');
+          this.route.navigate(['']);
+        },
+        error: error => {
+          console.error('There was an error!', error);
+        }
+      });
     }
   }
+
+
 
 }
