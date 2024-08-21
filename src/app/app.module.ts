@@ -35,6 +35,7 @@ import { FormGroup } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { EmailComponent } from './components/basicInformation/email/email.component';
+import { AddnoteComponent } from './components/addnote/addnote.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { EmailComponent } from './components/basicInformation/email/email.compon
     NotesComponent,
     ArchiveComponent,
     TrashComponent,
-    EmailComponent
+    EmailComponent,
+    AddnoteComponent
   ],
   imports: [
     BrowserModule,

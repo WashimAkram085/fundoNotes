@@ -15,4 +15,9 @@ export class NoteservicesService {
     return this.httpclient.get(`https://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList?access_token=${id}`);
   }
 
+  addNotes(data:any){
+    const id = localStorage.getItem("access_token");
+    return this.httpclient.post(`https://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes?access_token=${id}`,data);
+  }
+
 }

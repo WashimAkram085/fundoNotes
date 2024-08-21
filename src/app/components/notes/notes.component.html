@@ -1,17 +1,6 @@
-<div class="search-bar">
-    <mat-form-field appearance="outline" style="display: flex;">
-        <div style="display: flex;">
 
-            <input matInput style="margin-top: 10px;" placeholder="Take a note ..">
-
-            <mat-icon style="margin-top: 13px;">check_box</mat-icon>
-            <mat-icon style="margin-top: 13px; margin-left: 10px;">brush</mat-icon>
-            <mat-icon style="margin-top: 13px; margin-left: 10px;">image</mat-icon>
-
-        </div>
-    </mat-form-field>
-</div>
-
+<!-- take a note searchBar -->
+<app-addnote></app-addnote>
 
 <div class="note-card">
     <div class="card" *ngFor = "let note of notesList">

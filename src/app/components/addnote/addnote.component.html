@@ -1,0 +1,23 @@
+<div *ngIf="isExpanded==false" class="note-input" >
+    <input type="text" placeholder="Take a note..." >
+    <mat-icon (click)="expand()" >check</mat-icon>
+    <mat-icon>brush</mat-icon>
+    <mat-icon>image</mat-icon>
+    <mat-icon>mic</mat-icon>
+  </div>
+ 
+<div *ngIf="isExpanded" [formGroup]="notesform" class="note-expanded">
+  <div style="display: flex; width: 100%;">
+    <input type="text" placeholder="Enter title" style="width: 80%;" formControlName="title" >
+    <span><mat-icon style="margin-top: 2%; cursor: pointer;">push_pin</mat-icon></span>
+  </div>
+  <textarea placeholder="Take a note ..." formControlName="note" ></textarea>
+  <div class="icons" style="display: flex;justify-content: space-around; width: 100%; align-items: center;">
+    <span><mat-icon>add_alert</mat-icon></span>
+    <span><mat-icon>person_add</mat-icon></span>
+    <span><mat-icon>image</mat-icon></span>
+    <span><mat-icon>archive</mat-icon></span>
+    <button (click)="submitNote()" mat-button style="background-color: transparent;">Add</button>
+  </div>
+</div>
+ 
