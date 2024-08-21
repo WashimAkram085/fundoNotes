@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NoteservicesService } from 'src/app/services/noteservices.service';
+import { SearchService } from 'src/app/services/search.service';
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
@@ -8,7 +9,10 @@ import { NoteservicesService } from 'src/app/services/noteservices.service';
 export class NotesComponent {
   notesList:any[]=[];
 
-  constructor(private noteservice: NoteservicesService) {
+  //to store data of navbar search
+  search : string = '';
+
+  constructor(private noteservice: NoteservicesService, private searchservice : SearchService) {
   }
 
   ngOnInit(): void {
@@ -21,6 +25,10 @@ export class NotesComponent {
       error: (err: any) => {
         console.log(err);
       }
+    });
+
+    this.searchservice.search.subscribe((val:any) => {
+      this.search = val;
     });
   }
 
@@ -59,6 +67,8 @@ export class NotesComponent {
       }
     });
   }
+
+
 
   
 }

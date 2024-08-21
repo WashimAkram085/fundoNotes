@@ -36,6 +36,7 @@ import { FormGroup } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmailComponent } from './components/basicInformation/email/email.component';
 import { AddnoteComponent } from './components/addnote/addnote.component';
+import { SearchPipe } from './pipe/searchpipe/search.pipe';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { AddnoteComponent } from './components/addnote/addnote.component';
     ArchiveComponent,
     TrashComponent,
     EmailComponent,
-    AddnoteComponent
+    AddnoteComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

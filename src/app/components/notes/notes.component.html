@@ -3,14 +3,14 @@
 <app-addnote></app-addnote>
 
 <div class="note-card">
-    <div class="card" *ngFor = "let note of notesList">
+    <div class="card" *ngFor = "let note of notesList | searchpipe : search">
         <div class="header">{{note.title}}</div>
         <div class="body">{{note.description}}</div>
         <div class="button">
             <mat-icon class="button-icon" (click)="archive(note)">archive</mat-icon>
             <mat-icon class="button-icon" (click)="delete(note)">delete_outline</mat-icon>
             <mat-icon class="button-icon">favorite_border</mat-icon>
-            <mat-icon class="button-icon">home</mat-icon>
+            <mat-icon class="button-icon">settings</mat-icon>
             <mat-icon class="button-icon">label_important</mat-icon>
         </div>
     </div>

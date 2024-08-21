@@ -31,7 +31,7 @@ export class BirthdayComponent {
 
       this.gender = this.signupform.get('gender')?.value;
       console.log(this.dob);
-      console.log(this.gender);
+      console.log(this.gender); 
 
       this.signupservice.setdob(this.dob);
       this.signupservice.setgender(this.gender);

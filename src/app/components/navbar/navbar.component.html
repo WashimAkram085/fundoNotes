@@ -7,7 +7,7 @@
     <span class="spacer"></span>
     <mat-form-field appearance="outline">
         <mat-icon style="margin-top: 14px;">search</mat-icon>
-        <input matInput>
+        <input matInput name="search" [(ngModel)]="search" (keyup)="onsearch()">
         <!-- <button class="searchBar" mat-icon-button matSuffix></button> -->
     </mat-form-field>
     <div class="icons">
