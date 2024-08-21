@@ -10,6 +10,7 @@ import { SearchService } from 'src/app/services/search.service';
 export class NavbarComponent {
   navTitile: string = 'FundooNotes';
 
+
   constructor(private router: Router, private searchservice : SearchService) { }
 
   logout() {
@@ -29,4 +30,14 @@ export class NavbarComponent {
   onsearch() {
     this.searchservice.updateSearch(this.search);
   }
+
+
+  //sidebar show and hide
+  Sidebar: boolean = true;
+  showSidebar() {
+    this.Sidebar = !this.Sidebar;
+    this.searchservice.updateSidebar(this.Sidebar);
+  }
+
+
 }

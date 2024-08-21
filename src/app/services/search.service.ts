@@ -7,10 +7,18 @@ import { BehaviorSubject } from 'rxjs';
 export class SearchService {
 
   search = new BehaviorSubject('');
+  
+  sidebar = new BehaviorSubject(true);
 
   updateSearch(value: string) {
     this.search.next(value);
   }
 
+  updateSidebar(value: boolean) {
+    this.sidebar.next(value);
+  }
+
   constructor() { }
+
+
 }

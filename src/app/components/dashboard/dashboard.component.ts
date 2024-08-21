@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SearchService } from 'src/app/services/search.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,4 +14,9 @@ export class DashboardComponent {
       this.currentRoute = this.router.url;
     })
   }
+  // sidebar: boolean = true;
+  // ngOnInit(): void {
+    
+  // }
+
 }

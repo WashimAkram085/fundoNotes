@@ -1,4 +1,4 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container class="example-container" *ngIf="sidebar===true">
     <mat-sidenav mode="side" opened>
       <mat-nav-list>
         <mat-list-item [routerLink]="['/dashboard/notes']">
