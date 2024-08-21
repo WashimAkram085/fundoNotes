@@ -2,15 +2,7 @@
 <app-navbar></app-navbar>
 <div class="bdy">
     <app-sidebar></app-sidebar>
-    <div *ngIf="currentRoute === '/dashboard'" style="display: flex;">
-        <app-notes></app-notes>
-    </div>
-    <div *ngIf="currentRoute === '/dashboard/archive'">
-        <app-archive></app-archive>
-    </div>
-    <div *ngIf="currentRoute === '/dashboard/trash'">
-        <app-trash></app-trash>
-    </div> 
+    <router-outlet></router-outlet>
 </div>
 
 <!-- <div style="display: flex; align-items: center; height: auto;">

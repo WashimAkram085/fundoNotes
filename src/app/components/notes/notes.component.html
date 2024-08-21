@@ -8,7 +8,7 @@
         <div class="body">{{note.description}}</div>
         <div class="button">
             <mat-icon class="button-icon">check_circle</mat-icon>
-            <mat-icon class="button-icon">delete_outline</mat-icon>
+            <mat-icon class="button-icon" (click)="delete(note)">delete_outline</mat-icon>
             <mat-icon class="button-icon">favorite_border</mat-icon>
             <mat-icon class="button-icon">home</mat-icon>
             <mat-icon class="button-icon">label_important</mat-icon>

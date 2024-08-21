@@ -9,6 +9,8 @@ import { PasswordComponent } from './components/basicInformation/password/passwo
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { authGuard } from './guards/auth-guard.guard';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -24,7 +26,10 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent, canActivate: [authGuard],
     children: [
+      {path: '', component: NotesComponent},
       {path: 'notes', component: NotesComponent},
+      {path: 'archive', component: ArchiveComponent},
+      {path: 'trash', component: TrashComponent}
       
     ]
   }

@@ -20,4 +20,11 @@ export class NoteservicesService {
     return this.httpclient.post(`https://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes?access_token=${id}`,data);
   }
 
+  deleteNotes(data : any){
+    const id = localStorage.getItem("access_token");
+    return this.httpclient.patch(`https://fundoonotes.incubation.bridgelabz.com/api/notes/${data.id}?access_token=${id}`,data);
+  }
+
+  
+
 }

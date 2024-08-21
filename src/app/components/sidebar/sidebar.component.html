@@ -1,7 +1,7 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened>
       <mat-nav-list>
-        <mat-list-item>
+        <mat-list-item [routerLink]="['/dashboard/notes']">
           <mat-icon>note</mat-icon>
           <span>Notes</span>
         </mat-list-item>
@@ -21,7 +21,7 @@
           <mat-icon>archive</mat-icon>
           <span>Archive</span>
         </mat-list-item>
-        <mat-list-item>
+        <mat-list-item [routerLink]="['/dashboard/trash']">
           <mat-icon>delete</mat-icon>
           <span>Trash</span>
         </mat-list-item>
