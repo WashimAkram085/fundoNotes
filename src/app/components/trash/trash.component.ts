@@ -32,4 +32,18 @@ export class TrashComponent {
       }
     });
   }
+
+  restore(note:any){
+    console.log(note);
+    note.isDeleted = false;
+    this.noteservice.deleteNotes(note).subscribe({
+      next: (res: any) => {
+        console.log(res);
+        this.ngOnInit();
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    });
+  }
 }

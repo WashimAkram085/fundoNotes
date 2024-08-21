@@ -46,5 +46,19 @@ export class NotesComponent {
     });
   }
 
+  archive(note:any){
+    console.log(note);
+    note.isArchived = true;
+    this.noteservice.deleteNotes(note).subscribe({
+      next: (res: any) => {
+        console.log(res);
+        this.ngOnInit();
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    });
+  }
+
   
 }
